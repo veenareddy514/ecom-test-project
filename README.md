@@ -56,14 +56,16 @@ npx playwright test --headed
 
 ## Continuous integration (GitHub Actions)
 
-Tests run automatically on every push and pull request to main or master.
+The workflow runs manually (Actions → Playwright Tests → Run workflow).
+Automatic runs are disabled because the public demo site uses Cloudflare
+bot protection that blocks GitHub-hosted runners.
 
 - Uses the latest LTS version of Node.js on Ubuntu
 - Installs dependencies with npm ci and the Playwright browsers
 - Runs all tests (time limit: 60 minutes)
 - Uploads the HTML report as an artifact named playwright-report, kept for 30 days
 
-To view a report: open the **Actions** tab, choose a run, download playwright-report under **Artifacts**, then unzip it and open `ndex.html.
+To view a report: open the **Actions** tab, choose a run, download playwright-report under **Artifacts**, then unzip it and open index.html.
 
 ### Required secrets
 
