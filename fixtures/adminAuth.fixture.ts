@@ -11,7 +11,7 @@ export const test=base.extend<{adminAuthPage:Page}>({
          const email=process.env.ADMIN_EMAIL!;
          const password=process.env.ADMIN_PASSWORD!;
          await loginPage.login(email,password);
-         await expect(loginPage.navMenu).toContainText("Cba");
+         await expect(loginPage.navMenu).toContainText("John");
          await setUpContext.storageState({path:storageStatePath});
          await setUpContext.close();
          //Create a new context with the saved storage state

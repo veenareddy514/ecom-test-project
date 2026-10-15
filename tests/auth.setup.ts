@@ -11,7 +11,7 @@ setup("Create Customer 1 Authentication",async ({page})=>{
     await loginPage.navMenuSignIn.click();
     await loginPage.login(email,password);
     //Verify Login was successful
-    await expect(loginPage.navMenu).toContainText("Cba");
+    await expect(loginPage.navMenu).toContainText("Jane");
     //Save the storage state to a file
     await page.context().storageState({path:customer1AuthFile});
 
